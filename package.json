@@ -1,0 +1,36 @@
+{
+  "name": "dynamic-dashboard-server",
+  "version": "1.0.0",
+  "description": "server express",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run nodemon",
+    "seed-db": "node ./scripts/seed-db.js",
+    "d:up": "docker-compose up -d --build",
+    "d:seed": "docker exec node-app npm run seed-db",
+    "nodemon": "nodemon",
+    "lint": "eslint server.js lib/*.js config//*.js api//*.js"
+  },
+  "author": "ShmulikMak",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "lodash": "^4.17.14",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.4",
+    "morgan": "^1.9.1",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.6.2",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "nodemon": "^1.19.1"
+  }
+}

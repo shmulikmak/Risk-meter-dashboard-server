@@ -1,0 +1,22 @@
+{
+    "restartable": "rs",
+    "script": "server.js",
+    "ignore": [
+        ".git",
+        "node_modules/**/node_modules",
+        "logs/**"
+    ],
+    "verbose": true,
+    "nodeArgs": [
+        "--inspect"
+    ],
+    "execMap": {
+        "js": "node"
+    },
+    "watch": [
+        "server.js",
+        "api/",
+        "lib/"
+    ],
+    "ext": "js json html"
+}
